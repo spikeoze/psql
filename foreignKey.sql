@@ -1,7 +1,7 @@
 CREATE TABLE products (
     product_id BIGSERIAL PRIMARY KEY,
     product_name VARCHAR(50) NOT NULL,
-    price INT NOT NULL,
+    price FLOAT NOT NULL,
     category_id INT CONSTRAINT fk_category_id REFERENCES category(category_id),
     sub_category_id INT CONSTRAINT fk_sub_category_id REFERENCES sub_category(sub_category_id),
     extra_id INT CONSTRAINT fk_extra_id REFERENCES extras(extra_id)
